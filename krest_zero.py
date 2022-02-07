@@ -82,7 +82,7 @@ while count_w <= 2:
     for j in range(1, 4):
         pl_21 = 0
         for i in range(1, 4):
-            if sell[i][j] == 'x':
+            if sell[i][j] == 'o':
                 pl_21 += 1
         if pl_21 == 3:
             break
