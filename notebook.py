@@ -1,4 +1,4 @@
-def my_task():
+def my_task(): 
     for i in range(len(lst)):
         print(i + 1, lst[i] )
     x = input("Please, enter number (1, 2, 3, 4, 5, 0) ")
