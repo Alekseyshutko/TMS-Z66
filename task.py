@@ -55,6 +55,7 @@ def exit_task():
 
 
 def buy_buy():
+    write()
     print("Goodbye".center(34))
 
 
@@ -88,15 +89,6 @@ def complete_the_task():
     for i in x:
         lst[i - 1] = "+" + lst[i-1].upper()
         lst_1.append(lst[i - 1])
-    # x1 = input("do you want to delete a completed task (yes/no) ").lower()
-    # if x1 == "yes":
-    #     for i in x:
-    #         lst_1.append(lst[i - 1])
-    #     for i in x:
-    #         lst.pop(i - 1)
-    # else:
-    #     for i in x:
-    #         lst_1.append(lst[i - 1])
 
 
 def show_completed_task():
@@ -116,6 +108,18 @@ def show_incomplete_task():
             print(k, row)
     x = input("Please, enter number (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) ")
     meny[x]()
+
+
+def write():
+    with open("my_task.txt", "w") as file:
+        file.write("My task:".center(34))
+        file.write(" \n")
+        for row in lst:
+            file.write(row + '\n')
+        file.write("My completed task:".center(34))
+        file.write(" \n")
+        for row_1 in lst_1:
+            file.write(row_1 + '\n')
 
 
 lst_1 = []
